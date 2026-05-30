@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sigma Classes Meerut | Best SSC, Police, Banking & Defence Coaching</title>
+<meta name="description" content="Sigma Classes Meerut — premier coaching for SSC, UP & Delhi Police, Banking, Railways, CDS/NDA/CAPF and TET/CTET/SUPERTET. Expert faculty, proven results in Mohanpuri, Meerut.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0b1f3a;
+    --navy-2:#13294b;
+    --gold:#f5a623;
+    --gold-dark:#d4881a;
+    --ink:#0b1f3a;
+    --paper:#f7f4ee;
+    --paper-2:#ffffff;
+    --muted:#5a6b82;
+    --line:rgba(11,31,58,.12);
+    --green:#1d9e75;
+    --display:'Sora',sans-serif;
+    --body:'Plus Jakarta Sans',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.65;overflow-x:hidden}
+  h1,h2,h3,h4{font-family:var(--display);line-height:1.15;font-weight:700}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+  .accent{color:var(--gold)}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:100;background:rgba(11,31,58,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(245,166,35,.25)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{display:flex;align-items:center;gap:12px;color:#fff}
+  .logo .mark{width:42px;height:42px;border-radius:11px;background:var(--gold);display:grid;place-items:center;font-family:var(--display);font-weight:800;color:var(--navy);font-size:24px}
+  .logo b{font-family:var(--display);font-size:20px;font-weight:700;letter-spacing:.3px}
+  .logo small{display:block;font-size:11px;color:var(--gold);letter-spacing:3px;font-weight:600;margin-top:-2px}
+  .navlinks{display:flex;gap:30px;align-items:center}
+  .navlinks a{color:#dfe6f1;font-size:15px;font-weight:500;transition:color .2s}
+  .navlinks a:hover{color:var(--gold)}
+  .nav-cta{background:var(--gold);color:var(--navy)!important;padding:10px 20px;border-radius:9px;font-weight:700!important;font-size:14px!important}
+  .burger{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,#1c3866 100%);color:#fff;overflow:hidden;padding:90px 0 110px}
+  .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(245,166,35,.18) 1px,transparent 0);background-size:34px 34px;opacity:.5}
+  .hero::after{content:"";position:absolute;right:-160px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,.22),transparent 65%)}
+  .hero .wrap{position:relative;z-index:2}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,166,35,.15);border:1px solid rgba(245,166,35,.4);color:var(--gold);padding:7px 16px;border-radius:30px;font-size:13px;font-weight:600;letter-spacing:.5px;margin-bottom:26px}
+  .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:pulse 1.6s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  .hero h1{font-size:clamp(34px,5.4vw,62px);font-weight:800;max-width:880px;letter-spacing:-1px}
+  .hero h1 span{color:var(--gold)}
+  .hero p.lede{font-size:clamp(17px,2vw,21px);color:#cdd7e6;max-width:620px;margin:24px 0 38px}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:11px;font-family:var(--display);font-weight:600;font-size:16px;cursor:pointer;border:0;transition:transform .15s,box-shadow .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-gold{background:var(--gold);color:var(--navy);box-shadow:0 10px 30px -8px rgba(245,166,35,.6)}
+  .btn-ghost{background:rgba(255,255,255,.07);color:#fff;border:1.5px solid rgba(255,255,255,.3)}
+  .hero-stats{display:flex;gap:44px;margin-top:60px;flex-wrap:wrap}
+  .hero-stats .s b{display:block;font-family:var(--display);font-size:38px;font-weight:800;color:var(--gold)}
+  .hero-stats .s span{font-size:14px;color:#aebbce;letter-spacing:.4px}
+
+  /* SECTION SHELL */
+  section{padding:90px 0}
+  .eyebrow{text-align:center;color:var(--gold-dark);font-weight:700;letter-spacing:3px;font-size:13px;text-transform:uppercase;margin-bottom:14px}
+  .stitle{text-align:center;font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-.5px;max-width:760px;margin:0 auto}
+  .ssub{text-align:center;color:var(--muted);max-width:600px;margin:18px auto 0;font-size:17px}
+
+  /* EXAMS */
+  .exam-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:56px}
+  .ecard{background:var(--paper-2);border:1px solid var(--line);border-radius:18px;padding:30px 28px;transition:transform .22s,box-shadow .22s,border-color .22s;position:relative;overflow:hidden}
+  .ecard::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+  .ecard:hover{transform:translateY(-6px);box-shadow:0 24px 50px -22px rgba(11,31,58,.4);border-color:transparent}
+  .ecard:hover::before{transform:scaleX(1)}
+  .ecard .ic{width:54px;height:54px;border-radius:14px;background:rgba(245,166,35,.13);display:grid;place-items:center;font-size:27px;margin-bottom:20px}
+  .ecard h3{font-size:21px;margin-bottom:6px}
+  .ecard .tag{display:inline-block;font-size:12px;font-weight:600;color:var(--gold-dark);background:rgba(245,166,35,.12);padding:3px 11px;border-radius:20px;margin-bottom:12px}
+  .ecard p{color:var(--muted);font-size:14.5px}
+  .ecard .more{margin-top:16px;font-family:var(--display);font-weight:600;font-size:14px;color:var(--navy);display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+  .ecard .more:hover{color:var(--gold-dark)}
+
+  /* WHY */
+  .why{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+  .why::before{content:"";position:absolute;left:-140px;bottom:-140px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(245,166,35,.13),transparent 65%)}
+  .why .eyebrow{color:var(--gold)}
+  .why .stitle,.why .ssub{color:#fff}
+  .why .ssub{color:#b9c5d8}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;margin-top:56px;position:relative;z-index:2}
+  .wcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px}
+  .wcard .ic{font-size:30px;color:var(--gold);margin-bottom:14px;display:block}
+  .wcard h3{font-size:19px;margin-bottom:8px}
+  .wcard p{color:#b9c5d8;font-size:14.5px}
+
+  /* ABOUT split */
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+  .about .imgcol{position:relative}
+  .about .photo{aspect-ratio:4/3;border-radius:22px;background:linear-gradient(135deg,var(--navy),var(--navy-2));display:grid;place-items:center;color:rgba(255,255,255,.25);font-family:var(--display);font-weight:800;font-size:80px;border:1px solid var(--line)}
+  .about .float{position:absolute;bottom:-26px;right:-20px;background:var(--gold);color:var(--navy);padding:22px 26px;border-radius:16px;box-shadow:0 20px 40px -16px rgba(245,166,35,.6)}
+  .about .float b{font-family:var(--display);font-size:30px;font-weight:800;display:block}
+  .about .float span{font-size:13px;font-weight:600}
+  .about h2{font-size:clamp(26px,3.6vw,40px);font-weight:800;letter-spacing:-.5px;margin-bottom:20px}
+  .about p{color:var(--muted);font-size:16.5px;margin-bottom:16px}
+  .checklist{list-style:none;margin-top:22px}
+  .checklist li{display:flex;gap:12px;align-items:flex-start;margin-bottom:13px;font-weight:500}
+  .checklist li i{color:var(--green);font-style:normal;font-weight:800;background:rgba(29,158,117,.12);width:24px;height:24px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;font-size:13px}
+
+  /* ENQUIRY + CONTACT */
+  .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .form-card{background:var(--paper-2);border:1px solid var(--line);border-radius:22px;padding:38px}
+  .form-card h3{font-size:24px;margin-bottom:6px}
+  .form-card .fsub{color:var(--muted);font-size:15px;margin-bottom:26px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:14px;font-weight:600;margin-bottom:7px}
+  .field input,.field select,.field textarea{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:11px;font-family:var(--body);font-size:15px;background:#fff;transition:border-color .2s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+  .form-card .btn-gold{width:100%;justify-content:center}
+  .form-note{font-size:13px;color:var(--muted);text-align:center;margin-top:14px}
+  .ok-msg{display:none;background:rgba(29,158,117,.1);border:1px solid rgba(29,158,117,.4);color:#0f6e56;padding:16px;border-radius:12px;font-weight:600;margin-top:16px;text-align:center}
+
+  .info-block{margin-bottom:14px}
+  .info-row{display:flex;gap:16px;align-items:flex-start;background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:14px;transition:border-color .2s}
+  .info-row:hover{border-color:var(--gold)}
+  .info-row .ic{width:46px;height:46px;border-radius:12px;background:rgba(245,166,35,.13);display:grid;place-items:center;font-size:22px;flex-shrink:0}
+  .info-row b{font-family:var(--display);font-size:16px;display:block;margin-bottom:2px}
+  .info-row span,.info-row a{color:var(--muted);font-size:15px}
+  .info-row a:hover{color:var(--gold-dark)}
+  .social-row{display:flex;gap:12px;margin-top:8px}
+  .social-row a{width:46px;height:46px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:20px;transition:background .2s,transform .2s}
+  .social-row a:hover{background:var(--gold);color:var(--navy);transform:translateY(-3px)}
+  .map{margin-top:20px;border-radius:16px;overflow:hidden;border:1px solid var(--line);height:240px}
+  .map iframe{width:100%;height:100%;border:0}
+
+  /* FOOTER */
+  footer{background:var(--navy);color:#fff;padding:60px 0 30px}
+  .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px}
+  footer p{color:#a9b6cc;font-size:15px;margin-top:14px;max-width:320px}
+  footer h4{font-size:16px;margin-bottom:16px;color:var(--gold)}
+  footer ul{list-style:none}
+  footer ul li{margin-bottom:10px}
+  footer ul a{color:#a9b6cc;font-size:15px}
+  footer ul a:hover{color:#fff}
+  .fbar{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;text-align:center;color:#8696b0;font-size:14px}
+
+  /* FLOATING ACTIONS */
+  .float-actions{position:fixed;right:22px;bottom:22px;z-index:200;display:flex;flex-direction:column;gap:14px}
+  .fab{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font-size:28px;cursor:pointer;border:0;box-shadow:0 12px 30px -8px rgba(0,0,0,.4);transition:transform .2s}
+  .fab:hover{transform:scale(1.08)}
+  .fab-wa{background:#25d366;color:#fff}
+  .fab-bot{background:var(--gold);color:var(--navy);font-family:var(--display);font-weight:800}
+
+  /* CHAT WIDGET */
+  .chat-panel{position:fixed;right:22px;bottom:100px;z-index:300;width:380px;max-width:calc(100vw - 44px);height:560px;max-height:calc(100vh - 140px);background:var(--paper-2);border-radius:22px;box-shadow:0 30px 70px -20px rgba(11,31,58,.55);display:none;flex-direction:column;overflow:hidden;border:1px solid var(--line)}
+  .chat-panel.open{display:flex;animation:slideUp .25s ease}
+  @keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  .chat-head{background:var(--navy);color:#fff;padding:18px 20px;display:flex;align-items:center;gap:12px}
+  .chat-head .av{width:42px;height:42px;border-radius:12px;background:var(--gold);display:grid;place-items:center;font-family:var(--display);font-weight:800;color:var(--navy);font-size:20px}
+  .chat-head b{font-family:var(--display);font-size:16px;display:block}
+  .chat-head small{color:#9fc;font-size:12px;display:flex;align-items:center;gap:5px}
+  .chat-head small::before{content:"";width:7px;height:7px;border-radius:50%;background:#25d366;display:inline-block}
+  .chat-head .x{margin-left:auto;background:none;border:0;color:#fff;font-size:24px;cursor:pointer;opacity:.8}
+  .chat-head .x:hover{opacity:1}
+  .chat-body{flex:1;overflow-y:auto;padding:20px;background:var(--paper);display:flex;flex-direction:column;gap:12px}
+  .msg{max-width:82%;padding:12px 16px;border-radius:16px;font-size:14.5px;line-height:1.55;animation:fadeIn .25s}
+  @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+  .msg.bot{background:#fff;border:1px solid var(--line);align-self:flex-start;border-bottom-left-radius:5px}
+  .msg.user{background:var(--navy);color:#fff;align-self:flex-end;border-bottom-right-radius:5px}
+  .quick-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 20px 14px;background:var(--paper)}
+  .chip{background:#fff;border:1px solid var(--line);color:var(--navy);padding:8px 14px;border-radius:20px;font-size:13px;font-weight:500;cursor:pointer;transition:all .15s}
+  .chip:hover{background:var(--gold);border-color:var(--gold)}
+  .chat-input{display:flex;gap:10px;padding:16px;border-top:1px solid var(--line);background:#fff}
+  .chat-input input{flex:1;padding:12px 16px;border:1.5px solid var(--line);border-radius:24px;font-family:var(--body);font-size:14.5px;outline:none}
+  .chat-input input:focus{border-color:var(--gold)}
+  .chat-input button{width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--navy);border:0;font-size:20px;cursor:pointer;flex-shrink:0;display:grid;place-items:center}
+  .typing{align-self:flex-start;display:flex;gap:4px;padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:16px;border-bottom-left-radius:5px}
+  .typing span{width:8px;height:8px;border-radius:50%;background:var(--muted);animation:bounce 1.2s infinite}
+  .typing span:nth-child(2){animation-delay:.2s}
+  .typing span:nth-child(3){animation-delay:.4s}
+  @keyframes bounce{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-6px);opacity:1}}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:860px){
+    .navlinks{position:fixed;inset:74px 0 auto 0;background:var(--navy);flex-direction:column;padding:24px;gap:18px;display:none;border-bottom:1px solid rgba(245,166,35,.25)}
+    .navlinks.show{display:flex}
+    .burger{display:block}
+    .about,.contact-wrap,.fgrid{grid-template-columns:1fr}
+    .about .float{right:10px}
+    .hero{padding:64px 0 80px}
+    .hero-stats{gap:30px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#home" class="logo">
+        <div class="mark">Σ</div>
+        <div><b>Sigma Classes</b><small>MEERUT</small></div>
+      </a>
+      <div class="navlinks" id="navlinks">
+        <a href="#exams">Courses</a>
+        <a href="#why">Why Us</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Free Demo Class</a>
+      </div>
+      <button class="burger" id="burger">&#9776;</button>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home" style="padding-top:90px">
+  <div class="wrap">
+    <div class="badge"><span class="dot"></span> 5+ Years of Proven Selections in Meerut</div>
+    <h1>Your Government Job Dream <span>Starts at Sigma Classes</span></h1>
+    <p class="lede">Premier coaching for SSC, UP &amp; Delhi Police, Banking, Railways and Defence exams — led by Meerut's most experienced faculty, famous for making Maths simple.</p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-gold">Book a Free Demo Class &rarr;</a>
+      <a href="https://wa.me/919717915934" target="_blank" class="btn btn-ghost">&#128172; WhatsApp Us</a>
+    </div>
+    <div class="hero-stats">
+      <div class="s reveal"><b>8+</b><span>Exam categories covered</span></div>
+      <div class="s reveal"><b>5+</b><span>Years of selections</span></div>
+      <div class="s reveal"><b>1000+</b><span>Students mentored</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXAMS -->
+<section id="exams">
+  <div class="wrap">
+    <div class="eyebrow reveal">What We Teach</div>
+    <h2 class="stitle reveal">Coaching for every major government exam</h2>
+    <p class="ssub reveal">From written preparation to physical &amp; interview guidance — one institute for your complete journey into public service.</p>
+    <div class="exam-grid">
+      <div class="ecard reveal">
+        <div class="ic">&#128221;</div>
+        <span class="tag">Most Popular</span>
+        <h3>SSC (CGL / CHSL / MTS)</h3>
+        <p>Complete preparation for Combined Graduate Level, Higher Secondary and Multitasking Staff exams with strong focus on Maths &amp; reasoning.</p>
+        <span class="more" data-q="Tell me about your SSC CGL coaching, batches and fees">Ask about SSC &rarr;</span>
+      </div>
+      <div class="ecard reveal">
+        <div class="ic">&#128110;</div>
+        <span class="tag">Written + Physical</span>
+        <h3>UP Police &amp; Delhi Police</h3>
+        <p>Focused coaching for constable &amp; SI exams, including written preparation plus guidance for the physical fitness test (PET/PST).</p>
+        <span class="more" data-q="Tell me about UP Police and Delhi Police coaching">Ask about Police &rarr;</span>
+      </div>
+      <div class="ecard reveal">
+        <div class="ic">&#127974;</div>
+        <span class="tag">IBPS / SBI</span>
+        <h3>Banking Exams</h3>
+        <p>Bank PO &amp; Clerk preparation covering quantitative aptitude, reasoning, English and general awareness for IBPS and SBI.</p>
+        <span class="more" data-q="Tell me about your Banking exam coaching">Ask about Banking &rarr;</span>
+      </div>
+      <div class="ecard reveal">
+        <div class="ic">&#128642;</div>
+        <span class="tag">RRB</span>
+        <h3>Railways (RRB)</h3>
+        <p>Preparation for RRB NTPC, Group D, JE and other railway recruitment exams with regular tests and updated study material.</p>
+        <span class="more" data-q="Tell me about Railway RRB exam coaching">Ask about Railways &rarr;</span>
+      </div>
+      <div class="ecard reveal">
+        <div class="ic">&#127894;</div>
+        <span class="tag">Defence</span>
+        <h3>CDS / NDA / CAPF</h3>
+        <p>Defence services coaching for aspiring officers — CDS, NDA and CAPF — with subject expertise and exam strategy.</p>
+        <span class="more" data-q="Tell me about CDS, NDA and CAPF defence coaching">Ask about Defence &rarr;</span>
+      </div>
+      <div class="ecard reveal">
+        <div class="ic">&#128218;</div>
+        <span class="tag">Teaching</span>
+        <h3>TET / CTET / SUPERTET</h3>
+        <p>Become a government teacher — complete preparation for TET, CTET and SUPERTET with child development &amp; pedagogy focus.</p>
+        <span class="more" data-q="Tell me about TET, CTET and SUPERTET coaching">Ask about Teaching exams &rarr;</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="wrap">
+    <div class="eyebrow reveal">Why Sigma Classes</div>
+    <h2 class="stitle reveal">Meerut trusts us for one reason — results</h2>
+    <p class="ssub reveal">Everything we do is built around getting you selected.</p>
+    <div class="why-grid">
+      <div class="wcard reveal"><i class="ic">&#127891;</i><h3>Expert Faculty</h3><p>Experienced teachers known across Meerut for making tough Maths and reasoning genuinely easy to understand.</p></div>
+      <div class="wcard reveal"><i class="ic">&#128101;</i><h3>Small Batches</h3><p>Limited batch sizes mean every student gets personal attention and their doubts cleared, in class and outside it.</p></div>
+      <div class="wcard reveal"><i class="ic">&#128203;</i><h3>Study Material &amp; Tests</h3><p>Comprehensive, regularly updated study material with weekly tests and dedicated doubt-clearing sessions.</p></div>
+      <div class="wcard reveal"><i class="ic">&#127942;</i><h3>Proven Track Record</h3><p>Five years of consistent selections into SSC, Police, Banking and more — and a strong reputation to match.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="imgcol reveal">
+        <div class="photo">Σ</div>
+        <div class="float"><b>5+ Yrs</b><span>of selections &amp; trust</span></div>
+      </div>
+      <div class="reveal">
+        <div class="eyebrow" style="text-align:left">About The Institute</div>
+        <h2>A premier institute built for serious aspirants</h2>
+        <p>Sigma Classes, Meerut is a dedicated coaching institute for aspirants of government and competitive examinations. Established over five years ago, we have built our reputation on expert faculty, comprehensive study material and an outstanding selection record.</p>
+        <p>We help students achieve their dreams of serving the nation — guiding them from their very first class to their final selection.</p>
+        <ul class="checklist">
+          <li><i>&#10003;</i> Experienced &amp; result-oriented faculty</li>
+          <li><i>&#10003;</i> Regular mock tests &amp; performance tracking</li>
+          <li><i>&#10003;</i> Affordable fees compared to other institutes</li>
+          <li><i>&#10003;</i> Both offline classroom &amp; online support</li>
+        </ul>
+        <a href="#contact" class="btn btn-gold" style="margin-top:28px">Visit Us / Enquire &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT + ENQUIRY -->
+<section id="contact" style="background:var(--paper-2);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="eyebrow reveal">Get In Touch</div>
+    <h2 class="stitle reveal">Book your free demo class today</h2>
+    <p class="ssub reveal">Fill the form and our team will call you back, or reach us directly. Walk-ins welcome at Mohanpuri.</p>
+
+    <div class="contact-wrap" style="margin-top:56px">
+      <!-- FORM -->
+      <div class="form-card reveal">
+        <h3>Enquiry Form</h3>
+        <p class="fsub">Tell us which exam you're preparing for and we'll guide you.</p>
+        <div class="field">
+          <label>Full Name</label>
+          <input type="text" id="f-name" placeholder="Your name">
+        </div>
+        <div class="field">
+          <label>Mobile Number</label>
+          <input type="tel" id="f-phone" placeholder="10-digit mobile number">
+        </div>
+        <div class="field">
+          <label>Which exam are you preparing for?</label>
+          <select id="f-exam">
+            <option value="">Select an exam</option>
+            <option>SSC (CGL / CHSL / MTS)</option>
+            <option>UP Police / Delhi Police</option>
+            <option>Banking (PO / Clerk)</option>
+            <option>Railways (RRB)</option>
+            <option>CDS / NDA / CAPF</option>
+            <option>TET / CTET / SUPERTET</option>
+            <option>Not sure / Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Message (optional)</label>
+          <textarea id="f-msg" rows="3" placeholder="Any question for us?"></textarea>
+        </div>
+        <button class="btn btn-gold" id="submitBtn">Send Enquiry on WhatsApp &rarr;</button>
+        <div class="ok-msg" id="okMsg">&#10003; Thank you! Opening WhatsApp so you can send your enquiry directly to us.</div>
+        <p class="form-note">Or call us directly at <b>+91 97179 15934</b></p>
+      </div>
+
+      <!-- INFO -->
+      <div class="reveal">
+        <div class="info-row">
+          <div class="ic">&#128205;</div>
+          <div><b>Visit the Institute</b><span>9, Nehru Road, Mohanpuri, Meerut, Uttar Pradesh 250003</span></div>
+        </div>
+        <div class="info-row">
+          <div class="ic">&#128222;</div>
+          <div><b>Call / WhatsApp</b><br><a href="tel:+919717915934">+91 97179 15934</a></div>
+        </div>
+        <div class="info-row">
+          <div class="ic">&#128336;</div>
+          <div><b>Office Hours</b><span>Monday – Saturday, 8:00 AM – 7:00 PM</span></div>
+        </div>
+        <div style="margin-top:6px">
+          <b style="font-family:var(--display);font-size:15px">Follow us</b>
+          <div class="social-row">
+            <a href="https://www.youtube.com/channel/UCJ6zYqY_FIG4l9Y2-gemxkw" target="_blank" title="YouTube">&#9654;</a>
+            <a href="https://www.facebook.com/sigmaclassesmeerut/" target="_blank" title="Facebook">f</a>
+            <a href="https://whatsapp.com/channel/0029VakXMjd6hENu50rrH22o" target="_blank" title="WhatsApp Channel">&#128172;</a>
+          </div>
+        </div>
+        <div class="map">
+          <iframe loading="lazy" src="https://www.google.com/maps?q=Mohanpuri,Meerut,Uttar+Pradesh+250003&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a href="#home" class="logo"><div class="mark">Σ</div><div><b>Sigma Classes</b><small>MEERUT</small></div></a>
+        <p>Premier coaching for SSC, Police, Banking, Railways and Defence exams. Helping Meerut's aspirants secure their future in public service.</p>
+      </div>
+      <div>
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="#exams">SSC Exams</a></li>
+          <li><a href="#exams">UP / Delhi Police</a></li>
+          <li><a href="#exams">Banking</a></li>
+          <li><a href="#exams">Railways</a></li>
+          <li><a href="#exams">Defence &amp; Teaching</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://wa.me/919717915934" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbar">© 2026 Sigma Classes, Meerut · 9, Nehru Road, Mohanpuri · +91 97179 15934</div>
+  </div>
+</footer>
+
+<!-- FLOATING ACTIONS -->
+<div class="float-actions">
+  <button class="fab fab-bot" id="botToggle" title="Ask Sigma Assistant">&#931;</button>
+  <a class="fab fab-wa" href="https://wa.me/919717915934" target="_blank" title="Chat on WhatsApp">&#128172;</a>
+</div>
+
+<!-- CHAT PANEL -->
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <div class="av">&#931;</div>
+    <div><b>Sigma Assistant</b><small>Online · ask me anything</small></div>
+    <button class="x" id="chatClose">&times;</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="msg bot">Namaste! &#128075; I'm the Sigma Classes assistant. I can tell you about our courses, fees, batches, location and admission. How can I help you today?</div>
+  </div>
+  <div class="quick-chips" id="chips">
+    <span class="chip">Which exams do you coach?</span>
+    <span class="chip">Where are you located?</span>
+    <span class="chip">How do I join / admission?</span>
+    <span class="chip">Do you have online classes?</span>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="chatInput" placeholder="Type your question...">
+    <button id="chatSend">&#10148;</button>
+  </div>
+</div>
+
+<script>
+/* ---------- NAV / MOBILE ---------- */
+const burger=document.getElementById('burger'),navlinks=document.getElementById('navlinks');
+burger.addEventListener('click',()=>navlinks.classList.toggle('show'));
+navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('show')));
+
+/* ---------- REVEAL ON SCROLL ---------- */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ---------- ENQUIRY -> WHATSAPP ---------- */
+document.getElementById('submitBtn').addEventListener('click',()=>{
+  const name=document.getElementById('f-name').value.trim();
+  const phone=document.getElementById('f-phone').value.trim();
+  const exam=document.getElementById('f-exam').value;
+  const msg=document.getElementById('f-msg').value.trim();
+  if(!name||!phone){alert('Please enter your name and mobile number.');return;}
+  const text=`Hello Sigma Classes! I'd like to enquire.%0A%0AName: ${encodeURIComponent(name)}%0AMobile: ${encodeURIComponent(phone)}%0AExam: ${encodeURIComponent(exam||'Not specified')}${msg?'%0AMessage: '+encodeURIComponent(msg):''}`;
+  document.getElementById('okMsg').style.display='block';
+  setTimeout(()=>window.open('https://wa.me/919717915934?text='+text,'_blank'),700);
+});
+
+/* ---------- AI CHATBOT ---------- */
+const panel=document.getElementById('chatPanel'),body=document.getElementById('chatBody'),
+      input=document.getElementById('chatInput'),sendBtn=document.getElementById('chatSend');
+document.getElementById('botToggle').addEventListener('click',()=>{panel.classList.toggle('open');if(panel.classList.contains('open'))input.focus();});
+document.getElementById('chatClose').addEventListener('click',()=>panel.classList.remove('open'));
+
+/* ---------- SELF-CONTAINED ASSISTANT (no network, works anywhere) ---------- */
+/* Each intent: keywords to match + a reply written in light markdown
+   (**bold**, line breaks). renderMD() turns it into clean HTML. */
+const INTENTS=[
+  {k:['ssc','cgl','chsl','mts','graduate level'],
+   a:"We offer complete **SSC** coaching — **CGL, CHSL and MTS**.\n\nIt covers Maths, Reasoning, English and General Awareness, with our faculty's well-known strength in making Maths simple.\n\nYou also get weekly tests and doubt-clearing sessions. Want to book a **free demo class**? Call or WhatsApp **+91 97179 15934**."},
+  {k:['police','constable','si ','sub inspector','pet','pst','physical','up police','delhi police'],
+   a:"Yes! We coach for **UP Police** and **Delhi Police** (Constable & SI).\n\nThis includes full **written preparation** plus guidance for the **physical test (PET/PST)** so you're ready for every stage.\n\nVisit us at Mohanpuri or call **+91 97179 15934** for batch details."},
+  {k:['bank','banking','ibps','sbi','po','clerk'],
+   a:"We provide **Banking** coaching for **Bank PO and Clerk** (IBPS & SBI).\n\nIt covers Quantitative Aptitude, Reasoning, English and General Awareness with regular mock tests.\n\nFor current batches and fees, call **+91 97179 15934** or fill the enquiry form."},
+  {k:['railway','rrb','ntpc','group d','je'],
+   a:"We prepare students for **Railway (RRB)** exams — **NTPC, Group D and JE**.\n\nYou'll get updated study material, regular tests and full doubt support.\n\nWant to know more? Call or WhatsApp **+91 97179 15934**."},
+  {k:['cds','nda','capf','defence','defense','army','navy','air force'],
+   a:"For **Defence** aspirants we coach **CDS, NDA and CAPF**.\n\nOur faculty focuses on subject mastery and exam strategy to help you become an officer.\n\nDrop by Mohanpuri or call **+91 97179 15934** to start."},
+  {k:['tet','ctet','supertet','teacher','teaching','pedagogy'],
+   a:"Dreaming of a government teaching job? We coach **TET, CTET and SUPERTET**.\n\nThe course covers Child Development & Pedagogy along with the core subjects.\n\nCall **+91 97179 15934** for the next batch."},
+  {k:['exam','course','subject','which','what do you teach','offer'],
+   a:"We coach for all major government exams:\n\n• **SSC** (CGL / CHSL / MTS)\n• **UP & Delhi Police**\n• **Banking** (PO / Clerk)\n• **Railways (RRB)**\n• **CDS / NDA / CAPF**\n• **TET / CTET / SUPERTET**\n\nWhich one are you preparing for?"},
+  {k:['fee','fees','cost','price','charge','kitni','kitna'],
+   a:"Our fees are **affordable** compared to many other institutes in Meerut, and they vary by course.\n\nFor exact current fees, the best way is a quick call or WhatsApp on **+91 97179 15934** — or fill the enquiry form and we'll call you back.\n\nA **free demo class** is available before you enrol!"},
+  {k:['where','location','address','located','reach','kahan','map','direction'],
+   a:"You'll find us at:\n\n**9, Nehru Road, Mohanpuri, Meerut, UP 250003.**\n\nWe're open **Monday–Saturday, 8 AM–7 PM**. The map is on this page in the Contact section. See you soon!"},
+  {k:['join','admission','enroll','enrol','register','how to','start','batch','timing'],
+   a:"Joining is easy! You can:\n\n• **Walk in** to our Mohanpuri center\n• **Call / WhatsApp** us on **+91 97179 15934**\n• Fill the **enquiry form** on this page\n\nWe'll guide you on the right batch and you can take a **free demo class** first."},
+  {k:['online','offline','classroom','distance','home'],
+   a:"We offer **both offline classroom** and **online support**, so you can learn whichever way suits you best.\n\nFor details on the online option, call **+91 97179 15934**."},
+  {k:['demo','trial','free class'],
+   a:"Yes — we offer a **free demo class** so you can experience the teaching before enrolling.\n\nTo book it, just call or WhatsApp **+91 97179 15934** or fill the enquiry form above. 😊"},
+  {k:['contact','phone','number','call','whatsapp','mobile'],
+   a:"You can reach us anytime:\n\n**Call / WhatsApp:** +91 97179 15934\n**Address:** 9, Nehru Road, Mohanpuri, Meerut\n**Hours:** Mon–Sat, 8 AM–7 PM"},
+  {k:['faculty','teacher','teaching','staff','maths','math'],
+   a:"Our **experienced faculty** are known across Meerut for making tough subjects — especially **Maths and Reasoning** — genuinely easy to understand.\n\nWith **small batch sizes**, every student gets personal attention. Come take a free demo and see for yourself!"},
+  {k:['why','best','good','trust','result','selection'],
+   a:"Students choose Sigma Classes because of our **results**.\n\n• 5+ years of consistent selections\n• Expert, result-oriented faculty\n• Small batches + personal attention\n• Updated study material & weekly tests\n\nBook a **free demo class** on **+91 97179 15934**!"},
+  {k:['hi','hello','hey','namaste','namaskar','good morning','good evening'],
+   a:"Namaste! 🙏 Welcome to **Sigma Classes, Meerut**.\n\nI can help you with our courses, fees, location and admission. What would you like to know?"},
+  {k:['thank','thanks','dhanyavaad','shukriya'],
+   a:"You're most welcome! 😊 If you have any more questions, just ask — or call us on **+91 97179 15934**. Best of luck with your preparation!"}
+];
+const FALLBACK="I'd be happy to help! I can tell you about our **courses, fees, batches, location** and **admission**.\n\nFor anything specific, please call or WhatsApp **+91 97179 15934** — our team will guide you personally. 😊";
+
+function matchIntent(q){
+  const s=q.toLowerCase();
+  let best=null,score=0;
+  for(const it of INTENTS){
+    let c=0;for(const kw of it.k){if(s.includes(kw))c++;}
+    if(c>score){score=c;best=it;}
+  }
+  return best?best.a:FALLBACK;
+}
+/* light markdown -> safe HTML (escape first, then **bold** and newlines) */
+function renderMD(t){
+  const esc=t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  return esc.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');
+}
+function addMsg(text,who){
+  const d=document.createElement('div');d.className='msg '+who;
+  if(who==='bot'){d.innerHTML=renderMD(text);}else{d.textContent=text;}
+  body.appendChild(d);body.scrollTop=body.scrollHeight;return d;
+}
+function typing(){
+  const t=document.createElement('div');t.className='typing';t.innerHTML='<span></span><span></span><span></span>';
+  body.appendChild(t);body.scrollTop=body.scrollHeight;return t;
+}
+function ask(q){
+  addMsg(q,'user');
+  const t=typing();
+  const reply=matchIntent(q);
+  setTimeout(()=>{t.remove();addMsg(reply,'bot');},500+Math.random()*350);
+}
+function send(){const q=input.value.trim();if(!q)return;input.value='';ask(q);}
+sendBtn.addEventListener('click',send);
+input.addEventListener('keydown',e=>{if(e.key==='Enter')send();});
+document.getElementById('chips').addEventListener('click',e=>{
+  if(e.target.classList.contains('chip')){ask(e.target.textContent);}
+});
+/* exam card -> open bot with question */
+document.querySelectorAll('.ecard .more').forEach(m=>{
+  m.addEventListener('click',()=>{panel.classList.add('open');ask(m.dataset.q);});
+});
+</script>
+</body>
+</html>
